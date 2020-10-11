@@ -42,7 +42,7 @@ Passes the command to the Notes library, which executes the command.
 by write `node index.js --add2 "This is a really cool thing that I wanted to remember for later"` commint
 app will add note to the app 
 
-[](Capture3.PNG)
+![](Capture3.PNG)
 
 
 
@@ -51,4 +51,4 @@ tests
 Lint Tests: npm run lint
 
 and here process data flow
-[](Capture4.PNG)
+![](Capture4.PNG)
