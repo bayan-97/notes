@@ -31,7 +31,7 @@ describe('enter note', () => {
     //options.action=true;
     expect(options.actionValid()).toBeFalsy();
   });
-  
+
   it('returns false  if note enter but method isnot right ', () => {
     const options = new Input();
     options.action = false;
@@ -40,10 +40,6 @@ describe('enter note', () => {
 });
 describe('rigt output object', () => {
   it('returns the object ', () => {
-    // const expected = { name:'component name' }
-    // const actual = { name: 'component name', type: 'form' }
-    // expect(actual).toMatchObject(expected)
-
     const options = new Input();
 
     options.action = 'add';
@@ -68,32 +64,3 @@ describe('rigt output object', () => {
     expect(options).not.toEqual(expected);
   });
 });
-
-// describe('getBody', () => {
-//   it('returns undefined if not specified', () => {
-//     const options = new Input();
-//     expect(options.getBody()).toBeUndefined();
-//   });
-//   it('returns JSON if a stringified object', () => {
-//     const options = new Input();
-//     const obj = { name: 'mahmoud' };
-//     const str = JSON.stringify(obj);
-//     expect(options.getBody(str)).toEqual(obj);
-//   });
-//   it('returns a string if none-object is specified', () => {
-//     const options = new Input();
-//     const str = 'This is not an object!';
-//     expect(options.getBody(str)).toEqual(str);
-//   });
-// });
-// describe('validate', () => {
-//   it('return true when proper object is given', () => {
-//     const options = new Input();
-//     expect(options.valid()).toBeTruthy();
-//   });
-//   it('return false when proper object is given', () => {
-//     const options = new Input();
-//     options.url = undefined;
-//     expect(options.valid()).toBeFalsy();
-//   });
-// });
