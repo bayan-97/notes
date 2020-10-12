@@ -58,3 +58,58 @@ Lint Tests: npm run lint
 
 and here process data flow
 ![](Capture4.PNG)
+
+
+# LAB - Class 2
+
+##  APP TO ADD NOTES
+
+Author: **bayan alalem**
+
+[ci/cd](https://github.com/bayan-97/notes/actions/runs/302589813)
+
+ 
+- installed REQUIER:
+
+i install jest  by `npm init -D jest`
+
+- ## detailes about files 
+
+- **in input.test.js**
+
+Use the jest to test the functional which in input.js
+1-Test if my note enter
+
+2- Test if my method ==add
+3- test if my object return
+
+`jest.mock('minimist');`
+
+
+- **in note.test.js**
+
+1-Use thejest.spyOn(global.console, 'log');
+to appear the note by the console.log
+If there any error log  nothing	.
+
+`jest.spyOn(global.console, 'log');`
+
+
+tests
+Lint Tests: npm run lint
+test:npm test 
+
+## Running the app
+
+by write `npm test` commint
+app test return the result 
+
+![](Capture44.PNG)
+
+![](Capture33.PNG)
+
+and here process data flow
+
+
+![](Capture.PNG)
+
