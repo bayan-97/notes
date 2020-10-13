@@ -12,7 +12,7 @@
     "jest": "^26.5.3"
   },
   "scripts": {
-    "lint": "eslint **/*.js",
+    "lint": "eslint '**/*.js'",
     "test": "jest --coverage --verbose"
   },
   "repository": {
