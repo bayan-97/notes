@@ -4,15 +4,17 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "eslint": "^7.11.0",
     "is-url": "^1.2.4",
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.5",
+    "mongoose": "^5.10.9"
   },
   "devDependencies": {
     "jest": "^26.5.3"
   },
   "scripts": {
-    "lint": "eslint **/*.js",
+    "lint": "eslint '**/*.js'",
     "test": "jest --coverage --verbose"
   },
   "repository": {
