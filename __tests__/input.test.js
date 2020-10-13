@@ -63,4 +63,22 @@ describe('rigt output object', () => {
     };
     expect(options).not.toEqual(expected);
   });
+  
 });
+describe('valid method and note', () => {
+  it('returns true ', () => {
+    const options = new Input();
+
+    options.action = 'add';
+    options.payload = 'test note';
+
+    expect(options.valid()).not.toBeFalsy();
+  });
+  it('returns error ', () => {
+    const options = new Input();
+
+    options.action = 'add2';
+    options.payload ='' ;
+
+    expect(options.valid()).toBeFalsy();
+  });});
