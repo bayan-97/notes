@@ -17,7 +17,7 @@ describe('right method', () => {
   });
   it('returns false  if method isnot add ', () => {
     const options = new Input();
-    expect(options.act('delete')).toBeFalsy();
+    expect(options.act('delete')).not.toEqual('add');
   });
 });
 describe('enter note', () => {
@@ -63,7 +63,7 @@ describe('rigt output object', () => {
     };
     expect(options).not.toEqual(expected);
   });
-  
+
 });
 describe('valid method and note', () => {
   it('returns true ', () => {
