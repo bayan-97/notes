@@ -17,7 +17,7 @@ describe('right method', () => {
   });
   it('returns false  if method isnot add ', () => {
     const options = new Input();
-    expect(options.act('delete')).toBeFalsy();
+    expect(options.act('delete')).not.toEqual('add');
   });
 });
 describe('enter note', () => {
@@ -62,5 +62,23 @@ describe('rigt output object', () => {
       payload: 'test note',
     };
     expect(options).not.toEqual(expected);
+  });
+  describe('valid method and note', () => {
+    it('returns true ', () => {
+      const options = new Input();
+  
+      options.action = 'add';
+      options.payload = 'test note';
+  
+      expect(options.valid()).not.toBeFalsy();
+    });
+    it('returns error ', () => {
+      const options = new Input();
+  
+      options.action = 'add2';
+      options.payload ='' ;
+  
+      expect(options.valid()).toBeFalsy();
+    });
   });
 });

@@ -183,5 +183,81 @@ and here process data flow
 
 ![](Capturedataurl.PNG)
 
+# LAB - Class 4
+
+##  APP TO ADD NOTES
+
+Author: **bayan alalem**
+
+[ci/cd](https://github.com/bayan-97/notes/actions/runs/302589813)
+
+ 
+- installed REQUIER:
+
+i install jest  by `npm i -D @code-fellows/supergoose`
+
+- ## detailes about files 
+
+- **in  notes-collection.js**
+
+Create a notes “collection” through which you will perform CRUD operations with your notes mongoose schema.
+
+
+i implemened t the following collection interface methods for CRUD operations
+
+`get()`
+
+`create()`
+
+`update()`
+
+`delete()`
+
+and export the object
+
+- **in notes.test.js**
+
+
+we used the supergoose library to “mock” mongo 
+Test that after an create():
+
+The schema returned you an object with an ID
+Assert that a schema.find({id}) can see the directly record in the database
+
+
+we test if can update() the data to have spcifice id .
+
+Test that after doing a delete() that you can no longer see
+the note in a list()
+
+Assert that you can do a schema.find({id}) and see that the record is no longer in the database
+Test that after the user perform`
+
+
+
+
+tests
+Lint Tests: npm run lint
+ Tests: npm run test
+
+
+
+## Running the app
+by write `npm test` commint
+app test return the result 
+
+
+![](Capturelab4.PNG)
+
+and here process data flow
+
+
+
+![](Capturelab4url.PNG)
+
+
+
+
+
 
 
