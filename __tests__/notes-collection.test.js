@@ -1,8 +1,9 @@
 'use strict';
+require('@code-fellows/supergoose');
 const notes = require('../model/notes-collection.js');
 describe('notes Model', () => {
   it('can create() a new notes item', () => {
-    jest.setTimeout(5000);
+    jest.setTimeout(100000);
     const obj = { text: 'test notes', category: 'school' };
     return notes.create(obj).then((record) => {
       Object.keys(obj).forEach((key) => {
@@ -11,7 +12,7 @@ describe('notes Model', () => {
     });
   });
   it('can get() a notes item', async () => {
-    jest.setTimeout(5000);
+    jest.setTimeout(100000);
     const obj = { text: 'test notes', category: 'scool' };
     const expected = { text: 'test notes', category: 'scool' };
     const record = await notes.create(obj);
@@ -22,7 +23,7 @@ describe('notes Model', () => {
     });
   });
   it('can delete() a notes item', async () => {
-    jest.setTimeout(5000);
+    jest.setTimeout(100000);
     const obj = { text: 'test notes3', category: 'school' };
     // const expected = { text: 'test notes', category:'scool' };
     const record = await notes.create(obj);
@@ -34,7 +35,7 @@ describe('notes Model', () => {
     });
   });
   it('can update() a notes item', async () => {
-    jest.setTimeout(5000);
+    jest.setTimeout(100000);
     const obj = { text: 'test notes3', category: 'school' };
     // const expected = { text: 'test notes', category:'scool' };
     const record = await notes.create(obj);
