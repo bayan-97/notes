@@ -113,3 +113,151 @@ and here process data flow
 
 ![](Capture.PNG)
 
+
+# LAB - Class 3
+
+##  APP TO ADD NOTES
+
+Author: **bayan alalem**
+
+[ci/cd]()
+
+ 
+- installed REQUIER:
+
+i install jest  by `npm i mongoose`
+
+- ## detailes about files 
+
+- **in e notes.js**
+
+ we create notes schema has 2 properties
+1. text (string, required)
+2. category (string, required)
+
+
+
+
+- **in note.js**
+
+
+1. Bring in mongoose as a library
+`const mongoose = require('mongoose');`
+
+
+2. Create a new method for each of the allowed commands
+  Based on the payload of the command, perform the appropriate action using Mongoose methods and your notes schema
+`add()`
+it saved `.save()` of a new note object with the note and the category
+`delete()`
+it deleted a record by the ID
+`list()`
+it find of all notes, perhaps with a category if it was specified by the user.
+![](Capturedatabase.PNG)
+
+tests
+Lint Tests: npm run lint
+
+
+## Running the app
+
+by write `node index.js --add "This is fun" --category "schoo3"` commint
+app  add note to data base
+
+![](Capturenosql.PNG)
+by write `node index.js --list` commint
+app  appaer all the note in our data base
+
+![](Capturelist.PNG)
+by write `node index.js --list schoo3` commint
+app  appaers the note which specified by the user  from our data base
+![](Capturelistwith.PNG)
+
+by write ` node index.js  --delete  5f85d3173adcc620eea8053f` commint
+app  appaers delete the note which specified by the user by id
+![](Capturedelete.PNG)
+
+and here process data flow
+
+
+
+![](Capturedataurl.PNG)
+
+# LAB - Class 4
+
+##  APP TO ADD NOTES
+
+Author: **bayan alalem**
+
+[ci/cd](https://github.com/bayan-97/notes/actions/runs/302589813)
+
+ 
+- installed REQUIER:
+
+i install jest  by `npm i -D @code-fellows/supergoose`
+
+- ## detailes about files 
+
+- **in  notes-collection.js**
+
+Create a notes “collection” through which you will perform CRUD operations with your notes mongoose schema.
+
+
+i implemened t the following collection interface methods for CRUD operations
+
+`get()`
+
+`create()`
+
+`update()`
+
+`delete()`
+
+and export the object
+
+- **in notes.test.js**
+
+
+we used the supergoose library to “mock” mongo 
+Test that after an create():
+
+The schema returned you an object with an ID
+Assert that a schema.find({id}) can see the directly record in the database
+
+
+we test if can update() the data to have spcifice id .
+
+Test that after doing a delete() that you can no longer see
+the note in a list()
+
+Assert that you can do a schema.find({id}) and see that the record is no longer in the database
+Test that after the user perform`
+
+
+
+
+tests
+Lint Tests: npm run lint
+ Tests: npm run test
+
+
+
+## Running the app
+by write `npm test` commint
+app test return the result 
+
+
+![](Capturelab4.PNG)
+
+and here process data flow
+
+
+
+![](Capturelab4url.PNG)
+
+
+
+
+
+
+
