@@ -10,7 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "lint":"eslint **/*.js"
+    "lint":"eslint'**/*.js'"
   },
   "repository": {
     "type": "git",
